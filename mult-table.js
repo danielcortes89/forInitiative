@@ -97,7 +97,6 @@ let table = [
         answer: 24,
         id: 23
     }, // STARTING 3
-
 ]
 
 // GOALS:
@@ -105,10 +104,6 @@ let table = [
 // 2 - Make loop to call function then push to container
 
 // 1- MAKE FUNCTION TO CREATE QUESTION OBJECT
-//   a. take parameters (multiplicand, multiplier)
-//   b. Mkae string
-//   c. Make make product
-//   d. return object
 
 const makeMultiplicationQuestion = (multiplicand, multiplier, index) => {
     let question = `${multiplicand} * ${multiplier} : `;
@@ -120,26 +115,31 @@ const makeMultiplicationQuestion = (multiplicand, multiplier, index) => {
     }
 }
 
-// console.log(makeMultiplicationQuestion(5,6, 1))
+const makeAdditionQuestion = (first, second, index) => {
+    let question = `${first} + ${second} : `;
+    let answer = first + second;
+    return {
+        question,
+        answer,
+        index
+    }
+}
+
+console.log(makeAdditionQuestion(5,6, 1))
 
 // 2 - MAKE A LOOP TO  CALL FUNCTION THEN PUSH TO CONTAINER
-//  a. Make variables ( multiplicand, multiplier, index)
-//  b. Modify function to take index
-//  c. make container
-//  d. in loop execute with starting parameters
-//   push to container
-//  e. at end of loop, increment everything
-//  f. Make variable nultiplicand increment after multiplier is 12
-//  g. Make loop terminate once multiplicand is large enough (2)
 
 let container = []
 
 let multiplicand = 1;
 let multiplier = 1;
 let index = 0;
+let numofTables = 2;
+let numOfCycles = (numofTables * 12) + 1;
 
-for(let i = 1;  i < 25; i++){
-    container.push(makeMultiplicationQuestion(multiplicand, multiplier, index))
+for(let i = 1;  i < numOfCycles; i++){
+    // container.push(makeMultiplicationQuestion(multiplicand, multiplier, index))
+    container.push(makeAdditionQuestion(multiplicand, multiplier, index))
 
     ++multiplier;
     ++index;

@@ -110,13 +110,46 @@ let table = [
 //   c. Make make product
 //   d. return object
 
-const makeMultiplicationQuestion = (multiplicand, multiplier) => {
+const makeMultiplicationQuestion = (multiplicand, multiplier, index) => {
     let question = `${multiplicand} * ${multiplier} : `;
     let answer = multiplicand * multiplier;
     return {
         question,
-        answer
+        answer,
+        index
     }
 }
 
-// console.log(makeMultiplicationQuestion(5,6))
+// console.log(makeMultiplicationQuestion(5,6, 1))
+
+// 2 - MAKE A LOOP TO  CALL FUNCTION THEN PUSH TO CONTAINER
+//  a. Make variables ( multiplicand, multiplier, index)
+//  b. Modify function to take index
+//  c. make container
+//  d. in loop execute with starting parameters
+//   push to container
+//  e. at end of loop, increment everything
+//  f. Make variable nultiplicand increment after multiplier is 12
+//  g. Make loop terminate once multiplicand is large enough (2)
+
+let container = []
+
+let multiplicand = 1;
+let multiplier = 1;
+let index = 0;
+
+for(let i = 1;  i < 25; i++){
+    container.push(makeMultiplicationQuestion(multiplicand, multiplier, index))
+
+    ++multiplier;
+    ++index;
+    if(multiplier > 12){
+        ++multiplicand;
+        multiplier = 1;
+    }
+
+}
+// console.log(container)
+
+
+

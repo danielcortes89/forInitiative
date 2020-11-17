@@ -99,3 +99,24 @@ let table = [
     }, // STARTING 3
 
 ]
+
+// GOALS:
+// 1 - Make function to create question object.
+// 2 - Make loop to call function then push to container
+
+// 1- MAKE FUNCTION TO CREATE QUESTION OBJECT
+//   a. take parameters (multiplicand, multiplier)
+//   b. Mkae string
+//   c. Make make product
+//   d. return object
+
+const makeMultiplicationQuestion = (multiplicand, multiplier) => {
+    let question = `${multiplicand} * ${multiplier} : `;
+    let answer = multiplicand * multiplier;
+    return {
+        question,
+        answer
+    }
+}
+
+// console.log(makeMultiplicationQuestion(5,6))

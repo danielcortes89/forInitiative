@@ -125,7 +125,17 @@ const makeAdditionQuestion = (first, second, index) => {
     }
 }
 
-console.log(makeAdditionQuestion(5,6, 1))
+const makeSubtractionQuestion = (minuend, subtrahend, index) => {
+    let question = `${minuend} - ${subtrahend} : `;
+    let answer = minuend - subtrahend;
+    return {
+        question,
+        answer,
+        index
+    }
+}
+
+// console.log(makeAdditionQuestion(5,6, 1))
 
 // 2 - MAKE A LOOP TO  CALL FUNCTION THEN PUSH TO CONTAINER
 
@@ -139,7 +149,7 @@ let numOfCycles = (numofTables * 12) + 1;
 
 for(let i = 1;  i < numOfCycles; i++){
     // container.push(makeMultiplicationQuestion(multiplicand, multiplier, index))
-    container.push(makeAdditionQuestion(multiplicand, multiplier, index))
+    container.push(makeSubtractionQuestion(multiplicand, multiplier, index))
 
     ++multiplier;
     ++index;
@@ -149,7 +159,7 @@ for(let i = 1;  i < numOfCycles; i++){
     }
 
 }
-// console.log(container)
+console.log(container)
 
 
 

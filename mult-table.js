@@ -40,7 +40,9 @@ const makeDivisionQuestion = (dividend, divisor, index) => {
     }
 }
 
-const twentyRandomQuestions = (lowest, highest, operator) => {
+let functions = ['mult', 'divide', 'add', 'sub']
+
+const twentySameRandomQuestions = (lowest, highest, operator) => {
     let range = highest - lowest
     for(let i = 0; i < 20; i++){
         let randomFirst = Math.floor(Math.random() * range ) + lowest
@@ -50,7 +52,7 @@ const twentyRandomQuestions = (lowest, highest, operator) => {
     }
 }
 
-twentyRandomQuestions(1, 2);
+twentySameRandomQuestions(1, 2);
 console.log(container);
 
 // 2 - MAKE A LOOP TO  CALL FUNCTION THEN PUSH TO CONTAINER

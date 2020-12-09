@@ -95,13 +95,24 @@ let makeQuestionDisplay = (question) => {
 
     // container.innerText = question.question
     head.innerText = question.question
-    head.setAttribute("class", "question-display")
+    container.setAttribute("class", "question-display")
     input.setAttribute("type", "text")
     container.appendChild(head)
     container.appendChild(input)
 
     return container
 }
+
+let target = document.getElementById("questions")
+
+let appendToDom = (array) => {
+    array.map(question => {
+        // makeQuestionDisplay(question)
+        target.appendChild(makeQuestionDisplay(question))
+    })
+}
+
+appendToDom(container)
 
 
 

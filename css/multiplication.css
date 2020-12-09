@@ -1,10 +1,14 @@
 #questions {
     display: flex;
+    flex-wrap: wrap;
+
+    max-width: 992px;
 }
 
 .question-display {
     border: 1px solid black;
     padding: 2rem;
+    margin: 1rem;
 }
 
 .question-display h3 {

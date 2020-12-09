@@ -1,7 +1,7 @@
 let container = []
 
 const makeMultiplicationQuestion = (multiplicand, multiplier, index) => {
-    let question = `${multiplicand} * ${multiplier} : `;
+    let question = `${multiplicand} x ${multiplier} = `;
     let answer = multiplicand * multiplier;
     return {
         question,
@@ -11,7 +11,7 @@ const makeMultiplicationQuestion = (multiplicand, multiplier, index) => {
 }
 
 const makeAdditionQuestion = (first, second, index) => {
-    let question = `${first} + ${second} : `;
+    let question = `${first} + ${second} = `;
     let answer = first + second;
     return {
         question,
@@ -21,7 +21,7 @@ const makeAdditionQuestion = (first, second, index) => {
 }
 
 const makeSubtractionQuestion = (minuend, subtrahend, index) => {
-    let question = `${minuend} - ${subtrahend} : `;
+    let question = `${minuend} - ${subtrahend} = `;
     let answer = minuend - subtrahend;
     return {
         question,
@@ -31,7 +31,7 @@ const makeSubtractionQuestion = (minuend, subtrahend, index) => {
 }
 
 const makeDivisionQuestion = (dividend, divisor, index) => {
-    let question = `${dividend} / ${divisor} : `;
+    let question = `${dividend} / ${divisor} = `;
     let answer = dividend / divisor;
     return {
         question,

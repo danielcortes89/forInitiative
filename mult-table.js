@@ -108,18 +108,45 @@ let target = document.getElementById("questions")
 const assess = () => {
     console.log('Finished!!!')
 
+    let count = 0;
+    let correctAnswers = 0;
+    let score = 0
     let theirAnswers = document.getElementsByClassName("question-display")
-
-// let stepTwo = theirAnswers.forEach(question => question.lastChild.value)
     let hold = []
+    let answers = container.map(template => template.answer)
+
+
+
     for(let i = 0; i < theirAnswers.length;i++){
         let value = theirAnswers[i].lastChild.value
-        if(value == ""){
-            document.getElementById("error").style.display = "block"
-            return
-        }
+
+        // ERRORS DISABLED FOR DEVELOPMENT
+        // if(value == ""){
+        //     document.getElementById("error").style.display = "block"
+        //     return
+        // }
         hold.push(value)
     }
+
+    for(let i = 0; i < theirAnswers.length;i++){
+        if(theirAnswers[i].lastChild.value == answers[i]){
+            correctAnswers++;
+            count++
+        } else {
+            count++
+        }
+    }
+    console.log(correctAnswers / count * 100 + "here")
+
+
+    // solutions
+
+// Get their inputs COMPLETE
+// get the answers COMPLETE
+// compare COMPLETE
+// grade  COMPLETE
+
+    console.log(answers)
     console.log(hold)
 }
 
@@ -137,13 +164,6 @@ let appendToDom = (array) => {
 
 appendToDom(container)
 
-
-// solutions
-
-// Get their inputs
-// get the answers
-// compare
-// grade
 
 console.log()
 

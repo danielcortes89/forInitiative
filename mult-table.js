@@ -114,6 +114,10 @@ const assess = () => {
     let hold = []
     for(let i = 0; i < theirAnswers.length;i++){
         let value = theirAnswers[i].lastChild.value
+        if(value == ""){
+            document.getElementById("error").style.display = "block"
+            return
+        }
         hold.push(value)
     }
     console.log(hold)

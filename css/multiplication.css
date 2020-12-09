@@ -20,3 +20,7 @@
     height: 100px;
     background: greenyellow;
 }
+
+#error {
+    display: none;
+}

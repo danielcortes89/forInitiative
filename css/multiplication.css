@@ -1,0 +1,12 @@
+#questions {
+    display: flex;
+}
+
+.question-display {
+    border: 1px solid black;
+    padding: 2rem;
+}
+
+.question-display h3 {
+    margin-top: 0;
+}

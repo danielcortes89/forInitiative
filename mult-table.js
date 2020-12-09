@@ -52,7 +52,18 @@ const twentySameRandomQuestions = (lowest, highest, operator) => {
     }
 }
 
-twentySameRandomQuestions(1, 2);
+const tenSameRandomQuestions = (lowest, highest, operator) => {
+    let range = highest - lowest
+    for(let i = 0; i < 10; i++){
+        let randomFirst = Math.floor(Math.random() * range ) + lowest
+        let randomSecond = Math.floor(Math.random() * 12) + 1
+
+        container.push(makeMultiplicationQuestion(randomFirst, randomSecond, i))
+    }
+}
+
+// twentySameRandomQuestions(1, 2);
+tenSameRandomQuestions(1, 5)
 console.log(container);
 
 // 2 - MAKE A LOOP TO  CALL FUNCTION THEN PUSH TO CONTAINER
@@ -76,6 +87,21 @@ for(let i = 1;  i < numOfCycles; i++){
 
 }
 // console.log(container)
+
+let makeQuestionDisplay = (question) => {
+    let container = document.createElement("div")
+    let head = document.createElement("h3")
+    let input = document.createElement("input")
+
+    // container.innerText = question.question
+    head.innerText = question.question
+    head.setAttribute("class", "question-display")
+    input.setAttribute("type", "text")
+    container.appendChild(head)
+    container.appendChild(input)
+
+    return container
+}
 
 
 

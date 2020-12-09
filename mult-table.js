@@ -105,11 +105,20 @@ let makeQuestionDisplay = (question) => {
 
 let target = document.getElementById("questions")
 
+const assess = () => {
+    console.log('Finished!!!')
+}
+
 let appendToDom = (array) => {
     array.map(question => {
         // makeQuestionDisplay(question)
         target.appendChild(makeQuestionDisplay(question))
     })
+    let checkAnswerBtn = document.createElement("button")
+    checkAnswerBtn.setAttribute("id", "submitBtn")
+    checkAnswerBtn.addEventListener('click', assess)
+    checkAnswerBtn.innerText = "submit"
+    target.appendChild(checkAnswerBtn)
 }
 
 appendToDom(container)
@@ -121,3 +130,14 @@ appendToDom(container)
 // get the answers
 // compare
 // grade
+
+let theirAnswers = document.getElementsByClassName("question-display")
+
+// let stepTwo = theirAnswers.forEach(question => question.lastChild.value)
+let hold = []
+for(let i = 0; i < theirAnswers.length;i++){
+    let value = theirAnswers[i].lastChild.value
+    hold.push(value)
+}
+console.log()
+

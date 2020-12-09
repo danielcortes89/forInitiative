@@ -115,4 +115,9 @@ let appendToDom = (array) => {
 appendToDom(container)
 
 
+// solutions
 
+// Get their inputs
+// get the answers
+// compare
+// grade

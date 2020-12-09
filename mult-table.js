@@ -107,6 +107,16 @@ let target = document.getElementById("questions")
 
 const assess = () => {
     console.log('Finished!!!')
+
+    let theirAnswers = document.getElementsByClassName("question-display")
+
+// let stepTwo = theirAnswers.forEach(question => question.lastChild.value)
+    let hold = []
+    for(let i = 0; i < theirAnswers.length;i++){
+        let value = theirAnswers[i].lastChild.value
+        hold.push(value)
+    }
+    console.log(hold)
 }
 
 let appendToDom = (array) => {
@@ -131,13 +141,5 @@ appendToDom(container)
 // compare
 // grade
 
-let theirAnswers = document.getElementsByClassName("question-display")
-
-// let stepTwo = theirAnswers.forEach(question => question.lastChild.value)
-let hold = []
-for(let i = 0; i < theirAnswers.length;i++){
-    let value = theirAnswers[i].lastChild.value
-    hold.push(value)
-}
 console.log()
 

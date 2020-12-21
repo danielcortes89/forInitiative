@@ -121,10 +121,10 @@ const assess = () => {
         let value = theirAnswers[i].lastChild.value
 
         // ERRORS DISABLED FOR DEVELOPMENT
-        // if(value == ""){
-        //     document.getElementById("error").style.display = "block"
-        //     return
-        // }
+        if(value == ""){
+            document.getElementById("error").style.display = "block"
+            return
+        }
         hold.push(value)
     }
 
@@ -136,15 +136,9 @@ const assess = () => {
             count++
         }
     }
+
+    // if(){}
     console.log(correctAnswers / count * 100 + "here")
-
-
-    // solutions
-
-// Get their inputs COMPLETE
-// get the answers COMPLETE
-// compare COMPLETE
-// grade  COMPLETE
 
     console.log(answers)
     console.log(hold)

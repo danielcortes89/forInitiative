@@ -49,7 +49,22 @@ const twentySameRandomQuestions = (lowest, highest, operator) => {
         let randomFirst = Math.floor(Math.random() * range ) + lowest
         let randomSecond = Math.floor(Math.random() * 12) + 1
 
-        container.push(makeMultiplicationQuestion(randomFirst, randomSecond, i))
+        switch(operator){
+            case 'mult':
+                container.push(makeMultiplicationQuestion(randomFirst, randomSecond, i))
+                break
+            case 'divide':
+                container.push(makeDivisionQuestion(randomFirst, randomSecond, i))
+                break
+            case 'add':
+                container.push(makeAdditionQuestion(randomFirst, randomSecond, i))
+                break
+            case 'sub':
+                container.push(makeSubtractionQuestion(randomFirst, randomSecond, i))
+                break
+        }
+
+        // container.push(makeMultiplicationQuestion(randomFirst, randomSecond, i))
     }
 }
 
@@ -77,7 +92,7 @@ const tenSameRandomQuestions = (lowest, highest, operator) => {
     }
 }
 
-tenSameRandomQuestions(1,5, functions[1])
+twentySameRandomQuestions(1,5, functions[2])
 
 // 2 - MAKE A LOOP TO  CALL FUNCTION THEN PUSH TO CONTAINER
 

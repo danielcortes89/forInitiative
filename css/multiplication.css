@@ -24,3 +24,7 @@
 #error {
     display: none;
 }
+
+.underline {
+    text-decoration: line-through;
+}

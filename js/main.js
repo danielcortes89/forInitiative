@@ -53,7 +53,7 @@ const twentySameRandomQuestions = (lowest, highest, operator) => {
             case 'mult':
                 container.push(makeMultiplicationQuestion(randomFirst, randomSecond, i))
                 break
-            case 'divide':
+            case 'division':
                 container.push(makeDivisionQuestion(randomFirst, randomSecond, i))
                 break
             case 'add':
@@ -78,7 +78,7 @@ const tenSameRandomQuestions = (lowest, highest, operator) => {
             case 'mult':
                 container.push(makeMultiplicationQuestion(randomFirst, randomSecond, i))
                 break
-            case 'divide':
+            case 'division':
                 container.push(makeDivisionQuestion(randomFirst, randomSecond, i))
                 break
             case 'add':

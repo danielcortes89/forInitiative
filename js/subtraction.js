@@ -1,3 +1,19 @@
-tenSameRandomQuestions(1,5, 'sub')
+// tenSameRandomQuestions(1,5, 'sub')
+//
+// appendToDom(container)
 
-appendToDom(container)
+let howMany =  confirm('Wanna do 20?')
+
+if(howMany){
+    alert('You got it')
+    twentySameRandomQuestions(1,5, 'sub')
+// -MAKE ten objects (string, number and index) and push to container array
+
+    appendToDom(container)
+} else {
+    alert('10 it is')
+    tenSameRandomQuestions(1,5, 'sub')
+// -MAKE ten objects (string, number and index) and push to container array
+
+    appendToDom(container)
+}

@@ -1,7 +1,19 @@
-tenSameRandomQuestions(1,5, 'mult')
+let howMany =  confirm('Wanna do 20?')
+
+if(howMany){
+    alert('You got it')
+    twentySameRandomQuestions(1,5, 'mult')
 // -MAKE ten objects (string, number and index) and push to container array
 
-appendToDom(container)
+    appendToDom(container)
+} else {
+    alert('10 it is')
+    tenSameRandomQuestions(1,5, 'mult')
+// -MAKE ten objects (string, number and index) and push to container array
+
+    appendToDom(container)
+}
+
 // - make DOM for each question and push it into DOM and Make submit
 
 // 2 - MAKE A LOOP TO  CALL FUNCTION THEN PUSH TO CONTAINER

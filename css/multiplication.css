@@ -2,13 +2,15 @@
     display: flex;
     flex-wrap: wrap;
 
-    max-width: 992px;
+    width: 100%;
 }
 
 .question-display {
     border: 1px solid black;
     padding: 2rem;
-    margin: 1rem;
+    margin: 1rem auto;
+    width: 80%;
+
 }
 
 .question-display h3 {
@@ -27,4 +29,8 @@
 
 .underline {
     text-decoration: line-through;
+}
+
+@media screen and(min-width: 576px){
+
 }

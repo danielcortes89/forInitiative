@@ -6,10 +6,11 @@
 }
 
 .question-display {
+    text-align: center;
     border: 1px solid black;
     padding: 2rem;
     margin: 1rem auto;
-    width: 80%;
+    width: 60%;
 
 }
 

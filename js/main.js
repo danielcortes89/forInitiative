@@ -159,8 +159,11 @@ let appendToDom = (array) => {
         target.appendChild(makeQuestionDisplay(question))
     })
     let checkAnswerBtn = document.createElement("button")
+    let container = document.createElement("div")
+    container.setAttribute("class", "question-display")
     checkAnswerBtn.setAttribute("id", "submitBtn")
     checkAnswerBtn.addEventListener('click', assess)
     checkAnswerBtn.innerText = "submit"
-    target.appendChild(checkAnswerBtn)
+    container.appendChild(checkAnswerBtn)
+    target.appendChild(container)
 }

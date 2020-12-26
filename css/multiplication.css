@@ -18,6 +18,10 @@
     margin-top: 0;
 }
 
+.question-display input {
+    width: 80%;
+}
+
 #submitBtn {
     width: 100px;
     height: 100px;
@@ -32,6 +36,16 @@
     text-decoration: line-through;
 }
 
-@media screen and(min-width: 576px){
+@media screen and (min-width: 576px){
+    .question-display {
+        max-width: 330px;
+    }
+
+}
+
+@media screen and (min-width: 768px){
+    .question-display {
+        max-width: 280px;
+    }
 
 }

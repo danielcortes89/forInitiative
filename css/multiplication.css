@@ -1,3 +1,8 @@
+.header {
+    background: lightsteelblue;
+    padding: 1rem;
+}
+
 #questions {
     display: flex;
     flex-wrap: wrap;
@@ -38,10 +43,18 @@
 
 #error {
     display: none;
+    text-align: center;
+    border: 3px solid red;
+    background: lightcoral;
+    margin-top: 1rem;
 }
 
 #results {
     display: none;
+    text-align: center;
+    border: 3px solid green;
+    background: lightgreen;
+    margin-top: 1rem;
 }
 
 .underline {

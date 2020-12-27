@@ -20,6 +20,7 @@
 
 .question-display input {
     width: 80%;
+    background: cornflowerblue;
 }
 
 #submitBtn {
@@ -29,6 +30,10 @@
 }
 
 #error {
+    display: none;
+}
+
+#results {
     display: none;
 }
 

@@ -123,6 +123,7 @@ const assess = () => {
     let theirAnswers = document.getElementsByClassName("question-display")
     let hold = []
     let answers = container.map(template => template.answer)
+    console.log(theirAnswers)
 
 
 
@@ -132,6 +133,7 @@ const assess = () => {
         // ERRORS DISABLED FOR DEVELOPMENT
         if(value == ""){
             document.getElementById("error").style.display = "block"
+            console.log(hold)
             return
         }
         hold.push(value)
@@ -151,6 +153,10 @@ const assess = () => {
 
     console.log(answers)
     console.log(hold)
+
+    let results = document.getElementById('results')
+    results.style.display = 'block'
+    results.innerText = `Your score is ${correctAnswers / count * 100}`
 }
 
 // CREATE DOM FOR QUESTIONS AND SUBMIT BUTTON AND PUSH TO TARGET

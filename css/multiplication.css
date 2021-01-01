@@ -1,6 +1,11 @@
+:root {
+    --dark: #00272B;
+}
+
 .header {
-    background: lightsteelblue;
+    background: var(--dark);
     padding: 1rem;
+    color: white;
 }
 
 #questions {

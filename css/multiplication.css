@@ -1,5 +1,6 @@
 :root {
     --dark: #00272B;
+    --medium: #1D8A99;
 }
 
 .header {
@@ -37,7 +38,8 @@
 
 .question-display input {
     width: 80%;
-    background: cornflowerblue;
+    background: var(--medium);
+    color: white;
 }
 
 #submitBtn {

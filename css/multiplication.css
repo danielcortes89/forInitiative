@@ -1,6 +1,7 @@
 :root {
     --dark: #00272B;
     --medium: #1D8A99;
+    --attention: #c80815;
 }
 
 .header {
@@ -44,8 +45,12 @@
 
 #submitBtn {
     width: 100px;
-    height: 100px;
-    background: greenyellow;
+    height: 70px;
+    border-radius: 20px;
+    background: var(--attention);
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
 }
 
 #error {
@@ -77,6 +82,10 @@
 
 @media screen and (min-width: 768px){
     .question-display {
+        max-width: 280px;
+    }
+
+    .question-display2 {
         max-width: 280px;
     }
 

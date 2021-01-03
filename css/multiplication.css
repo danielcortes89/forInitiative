@@ -53,6 +53,18 @@
     font-size: 1.1rem;
 }
 
+.buttOn {
+    /*width: 100px;*/
+    /*height: 70px;*/
+    margin: 30px 0;
+    padding: 0.5rem;
+    border-radius: 20px;
+    background: var(--medium);
+    color: white;
+    /*font-weight: bold;*/
+    font-size: 1.1rem;
+}
+
 #error {
     display: none;
     text-align: center;
